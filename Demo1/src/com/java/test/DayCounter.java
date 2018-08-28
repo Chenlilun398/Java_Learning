@@ -5,7 +5,7 @@ package com.java.test;
  */
 public class DayCounter {
     public static void main(String[] args) {
-        int year = 2000;
+        int year = 2007;
         for (int month = 1; month <=12; month++){
             System.out.println(month + "月,共有" + Days(year,month) + "天：");
             for(int day = 1;day<=Days(year,month);day++) {
