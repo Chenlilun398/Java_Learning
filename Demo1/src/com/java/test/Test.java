@@ -1,24 +1,18 @@
 package com.java.test;
 
-
-import java.awt.*;
-import java.util.HashMap;
-import java.util.Map;
+import java.io.Console;
+import java.lang.String;
 
 /**
  * Created by viruser on 2018/8/21.
  */
-public class Test{
+public final class Test {
     public static void main(String[] args) {
-        HashMap look = new HashMap();
-        Rectangle r1 = new Rectangle(0, 0, 5, 5);
-        Rectangle r2 = new Rectangle(0, 0, 10, 10 );
-        Rectangle r3 = new Rectangle(0, 0, 15, 15 );
-        look.put("a",r1);
-        look.put("b",r2);
-        look.put("c",r3);
-
-        Rectangle r = (Rectangle) look.get("b");
-        System.out.println(r.x);
+        Person person1 = new Studend("zhangsan",25);
+        //person1.work();
+        Person person2 = new Person("lisi");
+        //person2.work();
+            Teacher studend = (Teacher) person2;
+            person2.work();
     }
 }

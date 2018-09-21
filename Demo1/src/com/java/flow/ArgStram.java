@@ -34,7 +34,7 @@ public class ArgStram {
 
     boolean readStream() {
         try (FileInputStream file = new
-                FileInputStream("C:\\Users\\viruser.v-desktop\\Desktop\\test.txt");
+                FileInputStream("C:\\Users\\viruser.v-desktop\\Desktop\\t1.txt");
         BufferedInputStream buff = new BufferedInputStream(file)) {
             int in ;
             do {
