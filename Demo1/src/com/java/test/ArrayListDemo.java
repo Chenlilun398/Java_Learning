@@ -1,63 +1,39 @@
 package com.java.test;
 
-import java.util.Arrays;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.NoSuchElementException;
 
 /**
  * Created by viruser on 2018/9/24.
  */
 public class ArrayListDemo {
     public static void main(String[] args) {
-        IArrayList<Fish> arrayList = new ArrayList<>(9);
-        for(int i = 0; i<10; i++) {
-            arrayList.add(new Fish(i + "fish"));
-        }
-        for(int i = 0; i<10; i++) {
-            System.out.println(arrayList.get(i).getName());
-        }
-        System.out.println(arrayList.size());
+       Stack<String> stringStack = new Stack<>();
+       stringStack.push("dddd");
+       stringStack.push("dfadfa");
+        stringStack.push("fadfdsfsdf");
+        stringStack.pop();
+       while (!stringStack.isEmpty()){
+           System.out.println(stringStack.pop());
+       }
     }
 }
 
-interface IArrayList<T>{
-    public void add(T obj);
-    T get(int index);
-    int size();
-}
+class Stack<T>{
+    private LinkedList<T> linkedList = new LinkedList<T>();
 
-class ArrayList<T> implements IArrayList<T>{
-    private Object[] obj =null;
-    private int count = 0;
-    public ArrayList(){
-        obj = new Object[8];
+    public T pop(){
+        return linkedList.removeFirst();
     }
-    public ArrayList(int capacity){
-        obj =  new Object[capacity];
+    public void push(T obj) {
+        linkedList.addFirst(obj);
     }
-    public void add(T obj){
-        this.obj[count++] = obj;
-        ensureCapacity();
-    }
-    public T get(int index){
-        return (T)obj[index];
-    }
-    public int size(){
-        return obj.length;
-    }
-    private void ensureCapacity(){
-        if(count >= obj.length){
-            //System.out.println("old" + obj.length);
-            obj = Arrays.copyOf(obj,obj.length<<1);
-            //System.out.println("new" + obj.length);
-        }
-    }
-}
 
-class Fish{
-    private String name ;
-    public Fish(String name){
-        this.name = name;
+    public boolean isEmpty(){
+        return linkedList.isEmpty();
     }
-    public String getName(){
-        return name;
-    }
+
 }
