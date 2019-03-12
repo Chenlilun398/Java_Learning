@@ -1,0 +1,6 @@
+1.新建ArrayList类容器时候这两种写法有什么区别？
+        ArrayList<Double> arrayList = new ArrayList<Double>();
+        ArrayList<Double> arrayList2 = new ArrayList();
+
+2.ArrayList类的indexOf方法调用了equals方法，例如ArrayList存储了Person类的对象，Person类也有一个equals方法，
+  为什么这个时候indexOf会调用Person类的equals方法？这是否是方法重写？方法重写是否只发生在继承的时候？
