@@ -5,7 +5,6 @@ package com.java.test;
  */
 public class ThisDemo {
     public static void main(String[] args) {
-        Student s=new Student("小明明",20);
-        System.out.println(s.name + s.age);
+
     }
 }
